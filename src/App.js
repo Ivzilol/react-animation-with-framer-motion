@@ -4,6 +4,7 @@ import BasicsOfMotion from "./components/BasicsOfMotion";
 import Gestures from "./components/Gestures";
 import AnimationControl from "./components/AnimationControl";
 import ViewBasicAnimations from "./components/ViewBasicAnimations";
+import ScrollAnimations from "./components/ScrollAnimations";
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,7 @@ function App() {
           <Route path="/gestures" element={<Gestures/>}/>
           <Route path="/animal-control" element={<AnimationControl/>}/>
           <Route path="/view-basic-animation" element={<ViewBasicAnimations/>}/>
+          <Route path="scroll-animation" element={<ScrollAnimations/>}/>
       </Routes>
     </div>
   );

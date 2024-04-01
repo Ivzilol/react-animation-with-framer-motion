@@ -8,7 +8,7 @@ const ViewBasicAnimations = () => {
     const isInView = useInView(ref, {once: true});
 
     useEffect(() => {
-        console.log("Is in view -> ", isInView)
+        console.log("Is in view -> ", isInView);
     }, [isInView])
 
     return(
