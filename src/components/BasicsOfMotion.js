@@ -15,31 +15,39 @@ const BasicsOfMotion = () => {
                 gap: "0.8rm"
             }}
         >
-            <button
+            <motion.button
                 onClick={() => setIsVisible(!isVisible)}
-                className="example-button">Show/Hide
-            </button>
-            {isVisible && (<motion.div
-                initial={{
-                    rotate: '0deg'
-                }}
-                animate={{
-                    rotate: '180deg '
-                }}
-                exit={{
-                    rotate: '0deg'
-                }}
-                transition={{
-                    duration: 2,
-                    ease: 'backInOut'
-                }}
-                style={{
-                    width: 150,
-                    height: 150,
-                    background: "black"
-                }}
+                className="example-button"
+                layout
             >
-            </motion.div>)}
+                Show/Hide
+            </motion.button>
+            <AnimatePresence mode="popLayout">
+                {isVisible && (<motion.div
+                    initial={{
+                        rotate: '0deg',
+                        scale: 0
+                    }}
+                    animate={{
+                        rotate: '180deg ',
+                        scale: 1
+                    }}
+                    exit={{
+                        rotate: '0deg',
+                        scale: 0
+                    }}
+                    transition={{
+                        duration: 1,
+                        ease: 'backInOut'
+                    }}
+                    style={{
+                        width: 150,
+                        height: 150,
+                        background: "black"
+                    }}
+                >
+                </motion.div>)}
+            </AnimatePresence>
         </div>
     );
 };
