@@ -1,20 +1,20 @@
-import {useState} from "react";
-import { useMeasure } from "@uidotdev/usehooks";
-import {useSpring} from "react-spring";
+import React, { useState } from 'react'
+import useMeasure from 'react-use-measure'
+import { useSpring, animated } from '@react-spring/web'
+
+import styles from './styles.module.css'
 
 const LoadBar = () => {
-    const [active, toggle] = useState(false);
-    const [bind, {width}] = useMeasure();
-    const props = useSpring({
-        from: {width: 0},
-        to: {width},
-    })
+    const [open, toggle] = useState(false)
+    const [ref, { width }] = useMeasure()
+    const props = useSpring({ width: open ? width : 0 })
 
-    return(
-        <div {...bind} className="main" onClick={() => toggle(!active)}>
-            <div className="fill" style={{width: active ? width : 0, height: '15px'}}></div>
-            <div className="content" style={{
-            }}>{active ? 100 : 0}</div>
+    return (
+        <div className={styles.container}>
+            <div ref={ref} className={styles.main} onClick={() => toggle(!open)}>
+                <animated.div className={styles.fill} style={props} />
+                <animated.div className={styles.content}>{props.width.to(x => x.toFixed(0))}</animated.div>
+            </div>
         </div>
     )
 }
