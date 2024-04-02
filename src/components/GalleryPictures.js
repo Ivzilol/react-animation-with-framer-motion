@@ -3,7 +3,6 @@ import React, { useRef, useEffect } from 'react'
 import { useSpring, animated, to } from '@react-spring/web'
 import { useGesture } from 'react-use-gesture'
 import image from './pic'
-import style from './GalleryPictures.css'
 
 const GalleryPictures = () => {
 
