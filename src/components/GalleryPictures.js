@@ -4,6 +4,7 @@ import { useSpring, animated, to } from '@react-spring/web'
 import { useGesture } from 'react-use-gesture'
 import image from './pic'
 
+
 const GalleryPictures = () => {
 
     const calcX = (y: number, ly: number) => -(y - ly - window.innerHeight / 2) / 20
