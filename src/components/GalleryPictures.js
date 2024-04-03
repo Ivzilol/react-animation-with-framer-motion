@@ -37,7 +37,7 @@ const GalleryPictures = () => {
             y: 0,
             config: { mass: 5, tension: 350, friction: 40 },
         })
-    )
+    );
 
     const [{ wheelY }, wheelApi] = useSpring(() => ({ wheelY: 0 }))
 
