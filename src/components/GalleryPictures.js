@@ -85,7 +85,6 @@ const GalleryPictures = () => {
             </animated.div>
         </div>
     )
-
 }
 
 export default GalleryPictures;
