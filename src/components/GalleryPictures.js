@@ -23,7 +23,7 @@ const GalleryPictures = () => {
             document.removeEventListener('gesturestart', preventDefault)
             document.removeEventListener('gesturechange', preventDefault)
         }
-    }, [])
+    }, []);
 
     const domTarget = useRef(null)
     const [{ x, y, rotateX, rotateY, rotateZ, zoom, scale }, api] = useSpring(
