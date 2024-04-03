@@ -86,7 +86,6 @@ const GalleryPictures = () => {
         </div>
     )
 
-
 }
 
 export default GalleryPictures;
