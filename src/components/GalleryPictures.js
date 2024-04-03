@@ -61,7 +61,7 @@ const GalleryPictures = () => {
             },
         },
         { domTarget, eventOptions: { passive: false } }
-    )
+    );
 
     return (
         <div className="container">
